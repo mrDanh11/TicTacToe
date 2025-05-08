@@ -124,8 +124,6 @@ def best_move(board):
                 score, depth = minimax(board, False, float('-inf'), float('inf'), 0)
                 board[i][j] = '.'
 
-                # print(f"Try: ({i},{j}) → Score: {score}, Depth: {depth}")
-
                 # uu tien score cao nhat, neu bang nhau -> chon depth lon hon
                 # if score > best_score or (score == best_score and depth > best_depth):
                 if score > best_score or (score == best_score and depth > best_depth):

@@ -48,13 +48,6 @@ project/
 
 ## 📄 Format của file testcase
 
-Mỗi file `.txt` gồm 3 dòng, mỗi dòng 3 ký tự.  
-Các ký tự hợp lệ là:
-
-- `X` – người chơi X
-- `O` – người chơi O
-- `.` – ô trống
-
 **Ví dụ (`testcase1.txt`):**
 ```
 .X.
@@ -62,26 +55,26 @@ OO.
 .X.
 ```
 
----
-
-## ✅ Kết quả
-
-Chương trình sẽ in ra:
-
-- Các nước đi có thể thử với điểm số và độ sâu.
-- Nước đi tốt nhất mà `X` nên chọn.
-
-Ví dụ:
+**Ví dụ (`testcase2.txt`):**
 ```
-Thử đi (0,0) → Score: 1, Depth: 2
-Thử đi (2,0) → Score: 0, Depth: 3
-Best move là (0, 0) với score 1, depth 2
-(0, 0)
+XXX
+OO.
+...
 ```
 
+**Ví dụ (`testcase3.txt`):**
+```
+OXO
+XXO
+XOX
+```
+
+**Ví dụ (`testcase4.txt`):**
+```
+X..
+.X.
+..X
+```
+
 ---
 
-## 📝 Ghi chú
-
-- Chương trình kiểm tra tính hợp lệ của bàn cờ trước khi chạy.
-- Nếu bàn cờ đã kết thúc, sẽ in ra `Game over`.
