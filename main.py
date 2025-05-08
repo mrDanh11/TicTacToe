@@ -32,7 +32,6 @@ def check_winner(board, player):
         return True
 
     return False
-
    
 def is_valid_board(board):
     flat = [cell for row in board for cell in row]
@@ -125,21 +124,24 @@ def best_move(board):
                 score, depth = minimax(board, False, float('-inf'), float('inf'), 0)
                 board[i][j] = '.'
 
-                print(f"Thử đi ({i},{j}) → Score: {score}, Depth: {depth}")
+                # print(f"Try: ({i},{j}) → Score: {score}, Depth: {depth}")
 
-                # Ưu tiên score cao nhất, nếu bằng thì chọn depth lowns hơn
+                # uu tien score cao nhat, neu bang nhau -> chon depth lon hon
                 # if score > best_score or (score == best_score and depth > best_depth):
                 if score > best_score or (score == best_score and depth > best_depth):
                     best_score = score
                     best_depth = depth
                     move = (i, j)
 
-    print(f"Best move là {move} với score {best_score}, depth {best_depth}")
+    print(f"Best move is: {move} with score: {best_score}, depth: {best_depth}")
     return move
 
 
 def main():
     file_path = './testcase/testcase1.txt'  
+    # file_path = './testcase/testcase2.txt'  
+    # file_path = './testcase/testcase3.txt'  
+    # file_path = './testcase/testcase4.txt'  
 
     board = read_board(file_path)
 
